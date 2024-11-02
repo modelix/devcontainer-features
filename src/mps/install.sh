@@ -24,7 +24,8 @@ echo "The effective dev container containerUser's home directory is '$_CONTAINER
 # install packages
 (
   apt-get update -y
-  apt-get -y install --no-install-recommends wget
+  apt-get -y install --no-install-recommends wget ca-certificates
+  update-ca-certificates
   mkdir /tmp/mps
   cd /tmp/mps
   wget "https://download.jetbrains.com/mps/${MPS_MAJOR_VERSION}/MPS-${MPS_VERSION}.tar.gz"
