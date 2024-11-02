@@ -1,0 +1,18 @@
+{
+    "mps-2024.1.1": {
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+        "features": {
+            "mps": {
+                "mps-version": "2024.1.1"
+            }
+        }
+    },
+    "mps-2022.2.41": {
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+        "features": {
+            "mps": {
+                "mps-version": "2022.2.4"
+            }
+        }
+    }
+}
