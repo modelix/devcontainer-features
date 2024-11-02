@@ -21,8 +21,9 @@ echo "The effective dev container remoteUser's home directory is '$_REMOTE_USER_
 echo "The effective dev container containerUser is '$_CONTAINER_USER'"
 echo "The effective dev container containerUser's home directory is '$_CONTAINER_USER_HOME'"
 
-# download MPS and extract into /mps
+# install packages
 (
+  apt-get update -y
   apt-get -y install --no-install-recommends curl
   mkdir /tmp/mps
   cd /tmp/mps
