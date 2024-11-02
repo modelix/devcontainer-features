@@ -1,7 +1,7 @@
 {
     "name": "JetBrains MPS",
     "id": "mps",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Installs JetBrains MPS",
     "options": {
         "mps-version": {

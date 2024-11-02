@@ -64,4 +64,4 @@ cp -r mps-config $_REMOTE_USER_HOME/.config/Modelix/MPS$MPS_MAJOR_VERSION
 chown -R $_REMOTE_USER:$_REMOTE_USER $_REMOTE_USER_HOME/.config
 chown -R $_REMOTE_USER:$_REMOTE_USER /mps
 
-runas -u $_REMOTE_USER /run-indexer.sh
+sudo -H -u $_REMOTE_USER bash -c '/run-indexer.sh'
