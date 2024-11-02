@@ -58,5 +58,10 @@ cp update-recent-mps-projects.sh /
 mkdir /mps-projects
 cp -r default-mps-project /mps-projects/default-mps-project
 
-mkdir -p $_CONTAINER_USER_HOME/.config/Modelix/
-cp -r mps-config $_CONTAINER_USER_HOME/.config/Modelix/$MPS_MAJOR_VERSION
+mkdir -p $_REMOTE_USER_HOME/.config/Modelix/
+cp -r mps-config $_REMOTE_USER_HOME/.config/Modelix/MPS$MPS_MAJOR_VERSION
+
+chown -R $_REMOTE_USER:$_REMOTE_USER $_REMOTE_USER_HOME/.config
+chown -R $_REMOTE_USER:$_REMOTE_USER /mps
+
+runas -u $_REMOTE_USER /run-indexer.sh

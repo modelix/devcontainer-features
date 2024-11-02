@@ -5,7 +5,7 @@
 set -x
 set -e
 
-find /config/home/mps-projects -type d -name ".mps" | while read -r dir
+find / -type d -name ".mps" | while read -r dir; do
 do
   /mps/bin/mps.sh warmup --project-dir="$(dirname "$dir")"
 done
