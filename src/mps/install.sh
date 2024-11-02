@@ -24,12 +24,11 @@ echo "The effective dev container containerUser's home directory is '$_CONTAINER
 # install packages
 (
   apt-get update -y
-  apt-get -y install --no-install-recommends curl ca-certificates
-  update-ca-certificates
+  apt-get -y install --no-install-recommends wget
   mkdir /tmp/mps
   cd /tmp/mps
-  curl -o mps.tar.gz "https://download.jetbrains.com/mps/${MPS_MAJOR_VERSION}/MPS-${MPS_VERSION}.tar.gz"
-  tar -xf mps.tar.gz
+  wget "https://download.jetbrains.com/mps/${MPS_MAJOR_VERSION}/MPS-${MPS_VERSION}.tar.gz"
+  tar -xf $(ls | head -n 1)
   mv "MPS $MPS_MAJOR_VERSION" "/mps"
 )
 
