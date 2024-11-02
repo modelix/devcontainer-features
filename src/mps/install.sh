@@ -25,8 +25,8 @@ echo "The effective dev container containerUser's home directory is '$_CONTAINER
 (
   mkdir /tmp/mps
   cd /tmp/mps
-  wget "https://download.jetbrains.com/mps/${MPS_MAJOR_VERSION}/MPS-${MPS_VERSION}.tar.gz"
-  tar -xf $(ls | head -n 1)
+  curl -o mps.tar.gz "https://download.jetbrains.com/mps/${MPS_MAJOR_VERSION}/MPS-${MPS_VERSION}.tar.gz"
+  tar -xf mps.tar.gz
   mv "MPS $MPS_MAJOR_VERSION" "/mps"
 )
 
